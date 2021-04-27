@@ -1,5 +1,3 @@
 com\imooc\my\mapper\MyMapper.class
 com\imooc\controller\HelloController.class
 com\imooc\Application.class
-com\imooc\service\impl\StuServiceImpl.class
-com\imooc\service\StuService.class
