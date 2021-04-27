@@ -33,7 +33,7 @@ public class PassportController {
         }
         //2。查找注册的用户名是否存在
         boolean isExist = userService.queryUsernameIsExist(username);
-        //System.out.println(isExist+"isExist");
+        System.out.println(isExist+"isExist");
         if(isExist){
             return IMOOCJSONResult.errorMsg("该用户已存在");
         }
