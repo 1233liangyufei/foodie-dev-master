@@ -7,6 +7,7 @@ import com.imooc.pojo.Users;
 import com.imooc.pojo.bo.UserBO;
 import com.imooc.service.UserService;
 import com.imooc.utils.DateUtil;
+import com.imooc.utils.IMOOCJSONResult;
 import com.imooc.utils.MD5Utils;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,13 +39,14 @@ public class UserServiceImpl implements UserService {
         userCriteria.andEqualTo("username",username);
         userCriteria.andEqualTo("password",password);
         Users result = usersMapper.selectOneByExample(userExample);
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(4000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return  result;
     }
+
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
@@ -69,11 +71,11 @@ public class UserServiceImpl implements UserService {
         user.setCreatedTime(new Date());
         user.setUpdatedTime(new Date());
         usersMapper.insert(user);
-        try {
-            Thread.sleep(2200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(2200);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return user;
     }
 
