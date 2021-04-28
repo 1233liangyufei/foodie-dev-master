@@ -9,7 +9,7 @@ public class UserBO {
     private String username;
     @ApiModelProperty(value = "密码",name = "password",example = "123456",readOnly = true)
     private String password;
-    @ApiModelProperty(value = "确认密码",name = "confirmPassword",example = "123456",readOnly = true)
+    @ApiModelProperty(value = "确认密码",name = "confirmPassword",example = "123456",readOnly = false)
     private String confirmPassword;
 
     public String getConfirmPassword() {
