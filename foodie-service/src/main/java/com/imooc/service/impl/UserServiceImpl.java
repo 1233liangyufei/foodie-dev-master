@@ -38,6 +38,11 @@ public class UserServiceImpl implements UserService {
         userCriteria.andEqualTo("username",username);
         userCriteria.andEqualTo("password",password);
         Users result = usersMapper.selectOneByExample(userExample);
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return  result;
     }
 
@@ -64,6 +69,11 @@ public class UserServiceImpl implements UserService {
         user.setCreatedTime(new Date());
         user.setUpdatedTime(new Date());
         usersMapper.insert(user);
+        try {
+            Thread.sleep(2200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return user;
     }
 
