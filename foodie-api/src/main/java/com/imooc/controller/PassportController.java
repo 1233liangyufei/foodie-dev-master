@@ -42,7 +42,9 @@ public class PassportController {
     }
     @ApiOperation(value = "用户注册",notes = "用户注册",httpMethod = "POST")
     @PostMapping ("/register")
-    public IMOOCJSONResult reguset(@RequestBody UserBO userBO){
+    public IMOOCJSONResult reguset(@RequestBody UserBO userBO,
+                                   HttpServletRequest request,
+                                   HttpServletResponse response){
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         String confirmPassword = userBO.getConfirmPassword();
@@ -67,8 +69,10 @@ public class PassportController {
             return IMOOCJSONResult.errorMsg("两次密码输入不一致");
         }
         //4 实现注册
-        userService.createUser(userBO);
+        Users userResult = userService.createUser(userBO);
+        userResult = setNullProperty(userResult);
 
+        CookieUtils.setCookie(request,response,"user", JsonUtils.objectToJson(userResult),true);
         return IMOOCJSONResult.ok();
     }
 
@@ -93,7 +97,7 @@ public class PassportController {
         }
         userResult = setNullProperty(userResult);
 
-        CookieUtils.setCookie(request,response,"username", JsonUtils.objectToJson(userResult),true);
+        CookieUtils.setCookie(request,response,"user", JsonUtils.objectToJson(userResult),true);
 
         return IMOOCJSONResult.ok(userResult);
     }
