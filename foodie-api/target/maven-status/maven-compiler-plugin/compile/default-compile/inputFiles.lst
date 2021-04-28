@@ -1,5 +1,9 @@
 /Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/controller/PassportController.java
 /Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/my/mapper/MyMapper.java
+/Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/aspect/ServiceLogAspect.java
 /Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/controller/HelloController.java
 /Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/controller/StuFooController.java
+/Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/config/CorsConfig.java
 /Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/Application.java
+/Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/config/Swagger2.java
+/Users/lyf/IdeaProjects/foodie-dev-master/foodie-api/src/main/java/com/imooc/controller/IndexController.java
